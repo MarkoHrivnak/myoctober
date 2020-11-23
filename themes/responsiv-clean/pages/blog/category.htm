@@ -18,14 +18,14 @@ displayEmpty = 0
 categoryPage = "blog/category"
 ==
 <div class="row" style="max-width:100%">
-    <div class="col-8">
+    <div class="col-md-8">
         {% set posts = blogPosts.posts %}
 
 <ul class="post-list" style="padding: 75px;">
     {% for post in posts %}
-            <h3><a href="{{ post.url }}" style="color: #4F79AC;text-decoration: none;">{{ post.title }}</a></h3>
+            <h3><a href="{{ post.url }}" style="color:#5d8989;text-decoration: none;font-family: 'Philosopher', sans-serif;font-size: 40px;">{{ post.title }}</a></h3>
 
-            <p class="info" style="color:green;">
+            <p class="info" style="color: #5d8989;font-family: 'Philosopher', sans-serif">
                 {% if post.categories.count %}
                     {% set categoryLinks = post.categories | map(c => "<a href=\"#{c.url}\">#{c.name} </a>") | join(', ') %}
 
@@ -66,7 +66,7 @@ categoryPage = "blog/category"
 {% endif %}
 
     </div>
-    <div class="col-4">
+    <div class="col-md-4">
         {% if blogCategories.categories|length > 0 %}
     <ul class="category-list" style="color: black;text-decoration: none;">
         {% partial blogCategories ~ "::items"
