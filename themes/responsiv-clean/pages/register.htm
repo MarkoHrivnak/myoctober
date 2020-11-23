@@ -1,0 +1,93 @@
+title = "register"
+url = "/register"
+layout = "default"
+is_hidden = 0
+
+[account]
+redirect = "homepage"
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+
+[session]
+security = "all"
+==
+<div class="row" style="max-width: 100%;">
+        <div class="col-md-4">
+            <div class="container" id="info">
+                <h3>Máš už založený účet? Prihlás sa <a style="color:#FE4066;" href="{{ 'login'|page }}">tu</a> </h3>
+                <p>
+                    Ak si prihlásený, medzi tvoje výhody patrí napríklad komentovanie príspevku.
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="container" id="form">
+                {% if canRegister %}
+    <h3>Registrácia</h3>
+
+    {{ form_ajax('onRegister') }}
+
+        <div class="form-group">
+            <label for="registerName">Meno a priezvisko</label>
+            <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="registerName"
+                placeholder="Zadaj svoje celé meno" />
+        </div>
+
+        <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="registerEmail"
+                placeholder="Zadaj svoj email" />
+        </div>
+
+        {% if loginAttribute == "username" %}
+            <div class="form-group">
+                <label for="registerUsername"></label>
+                <input
+                    name="username"
+                    type="text"
+                    class="form-control"
+                    id="registerUsername"
+                    placeholder="Zadaj svoje meno" />
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="registerPassword">Heslo</label>
+            <input
+                name="password"
+                type="password"
+                class="form-control"
+                id="registerPassword"
+                placeholder="Zadaj svoje heslo" />
+        </div>
+
+        <button type="submit" class="btn btn-dark sign-in">Registrovať</button>
+
+    {{ form_close() }}
+    {% else %}
+    <!-- Registration is disabled. -->
+{% endif %}
+        </div>
+            </div>
+        <div class="col-md-4">
+            <div class="container" id="info">
+                <h3>Výhody registrácie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fugiat eaque iure cumque assumenda error provident itaque ipsa,
+                 dolorum consequuntur! Temporibus, quisquam tempora! Sequi, voluptatem atque. Delectus commodi dicta temporibus!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+{% component 'session' %}

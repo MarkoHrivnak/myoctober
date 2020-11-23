@@ -1,0 +1,31 @@
+==
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+       
+    {% if user %}
+            <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"><a style="text-decoration: none; color: black;font-family: 'Philosopher', sans-serif;"data-request="onLogout" data-request-data="redirect: '/'">Odhlásiť sa</a></button>
+    {% else %}
+        {% if this.page.url == '/login' %}
+            <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"> <a style="text-decoration: none;color: black;font-family: 'Philosopher', sans-serif;" href="{{ 'register'|page }}">Registrovať sa</a></button>
+        {% elseif this.page.url == '/register' %}
+            <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"> <a style="text-decoration: none;color: black;font-family: 'Philosopher', sans-serif;" href="{{ 'login'|page }}">Prihlásiť sa</a></button>
+        {% else %}
+                <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"> <a style="text-decoration: none;color: black;font-family: 'Philosopher', sans-serif;" href="{{ 'login'|page }}">Prihlásiť sa</a></button>
+                <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"> <a style="text-decoration: none;color: black;font-family: 'Philosopher', sans-serif;" href="{{ 'register'|page }}">Registrovať sa</a></button>
+        {% endif %}
+    {% endif %}
+      </li>
+    </ul>
+    
+    
+    <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"> <a style="text-decoration: none;color: black;font-family: 'Philosopher', sans-serif;" href="{{ 'blog'|page }}">Blog</a></button>
+                <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"> <a style="text-decoration: none;color: black;font-family: 'Philosopher', sans-serif;" href="{{ 'about-us'|page }}">O nás</a></button>
+                <button type="button" class="btn btn-light" style="border-radius: 0px;border-bottom:  3px solid black;"> <a style="text-decoration: none;color: black;font-family: 'Philosopher', sans-serif;" href="{{ 'homepage'|page }}">Domov</a></button>
+            </li>
+        </ul>
+  </div>
+</nav>

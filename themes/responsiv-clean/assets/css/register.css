@@ -1,0 +1,33 @@
+input:focus{outline:0;}
+h3{
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+#form{
+    background-color:white;
+    padding: 30px;
+    margin-top: 200px;
+    padding-top: 20px;
+    font-family: 'Philosopher', sans-serif;
+}
+.form-group{
+    padding-bottom: 10px;
+}
+.form-group input{
+    border-radius: 0px;
+    border: none;
+    border-left: 3px solid black;
+}
+.signin{
+    border-radius: 0px;
+    border: 5px solid black;
+}
+#info{
+    background-color: white;
+    font-family: 'Philosopher', sans-serif;
+    margin-top: 200px;
+    padding: 20px;
+}
+#info h3{
+    border-bottom: 3px solid #FE4066;
+}

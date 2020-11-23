@@ -1,0 +1,76 @@
+title = "login"
+url = "/login"
+layout = "default"
+is_hidden = 0
+
+[session]
+security = "all"
+
+[account]
+redirect = "homepage"
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
+<div class="row" style="max-width: 100%;">
+        <div class="col-md-4">
+            <div class="container" id="info">
+                <h3>Nemáš ešte účet? Zaregistruj sa <a style="color:#FE4066;" href="{{ 'register'|page }}">tu</a> </h3>
+                <p>Stránku možeš používať aj bez prihlásenia, ale pre komentovanie príspevkov sa treba prihlásiť.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+<div class="container" id="form">
+                <h3>Prihlásiť sa</h3>
+            {{ form_ajax('onSignin') }}
+
+    <div class="form-group">
+        <label for="userSigninLogin">{{ loginAttributeLabel }}</label>
+        <input
+            name="login"
+            type="text"
+            class="form-control"
+            id="userSigninLogin"
+            placeholder="Zadajte svoj {{ loginAttributeLabel|lower }}" />
+    </div>
+
+    <div class="form-group">
+        <label for="userSigninPassword">Heslo</label>
+        <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="userSigninPassword"
+            placeholder="Zadaj svoje heslo" />
+    </div>
+
+    {% if rememberLoginMode == 'ask' %}
+    <div class="form-group">
+        <div class="checkbox">
+        <label><input name="remember" type="checkbox" value="1">Stay logged in</label>
+        </div>
+    </div>
+    {% endif %}
+
+    <button type="submit" class="btn btn-dark sign-in">Prihlásiť sa</button>
+
+{{ form_close() }}
+</div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="container" id="info">
+                <h3>Výhody prihlásenia</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis fugiat eaque iure cumque assumenda error provident itaque ipsa,
+                 dolorum consequuntur! Temporibus, quisquam tempora! Sequi, voluptatem atque. Delectus commodi dicta temporibus!
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% component 'session' %}
