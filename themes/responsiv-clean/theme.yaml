@@ -1,8 +1,8 @@
-name: Clean
-description: 'Clean blogger theme.'
-author: 'Responsiv Internet'
-homepage: 'http://responsiv.com'
-code: Clean
+name: 'My blog theme'
+description: ''
+author: 'Marko Hrivnák'
+homepage: ''
+code: ''
 form: theme_fields.yaml
 require:
     - RainLab.Blog
