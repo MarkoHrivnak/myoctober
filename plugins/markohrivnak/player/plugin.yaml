@@ -1,0 +1,11 @@
+plugin:
+    name: 'markohrivnak.player::lang.plugin.name'
+    description: 'markohrivnak.player::lang.plugin.description'
+    author: 'Marko Hrivnak'
+    icon: oc-icon-soccer-ball-o
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Player
+        url: markohrivnak/player/player
+        icon: icon-soccer-ball-o

@@ -1,0 +1,10 @@
+name: Player
+form: $/markohrivnak/player/models/player/fields.yaml
+modelClass: MarkoHrivnak\Player\Models\Player
+defaultRedirect: markohrivnak/player/player
+create:
+    redirect: 'markohrivnak/player/player/update/:id'
+    redirectClose: markohrivnak/player/player
+update:
+    redirect: markohrivnak/player/player
+    redirectClose: markohrivnak/player/player
