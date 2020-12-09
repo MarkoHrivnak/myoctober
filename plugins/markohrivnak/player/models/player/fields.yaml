@@ -7,6 +7,10 @@ fields:
         label: Club
         span: auto
         type: text
+    number:
+        label: Number
+        span: auto
+        type: text
     description:
         label: Description
         span: full

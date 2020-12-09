@@ -3,3 +3,6 @@
 1.0.2:
     - 'Created table markohrivnak_player_'
     - builder_table_create_markohrivnak_player_.php
+1.0.3:
+    - 'Updated table markohrivnak_player_'
+    - builder_table_update_markohrivnak_player_.php
