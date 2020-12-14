@@ -1,0 +1,38 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table markohrivnak_songs_'
+    - builder_table_create_markohrivnak_songs_.php
+1.0.3:
+    - 'Updated table markohrivnak_songs_'
+    - builder_table_update_markohrivnak_songs_.php
+1.0.4:
+    - 'Created table markohrivnak_songs_genres'
+    - builder_table_create_markohrivnak_songs_genres.php
+1.0.5:
+    - 'Created table markohrivnak_songs_songs_genres'
+    - builder_table_create_markohrivnak_songs_songs_genres.php
+1.0.6:
+    - 'Updated table markohrivnak_songs_'
+    - builder_table_update_markohrivnak_songs__2.php
+1.0.7:
+    - 'Updated table markohrivnak_songs_'
+    - builder_table_update_markohrivnak_songs__3.php
+1.0.8:
+    - 'Updated table markohrivnak_songs_genres'
+    - builder_table_update_markohrivnak_songs_genres.php
+1.0.9:
+    - 'Updated table markohrivnak_songs_genres'
+    - builder_table_update_markohrivnak_songs_genres_2.php
+1.0.10:
+    - 'Updated table markohrivnak_songs_'
+    - builder_table_update_markohrivnak_songs__4.php
+1.0.11:
+    - 'Updated table markohrivnak_songs_'
+    - builder_table_update_markohrivnak_songs__5.php
+1.0.12:
+    - 'Updated table markohrivnak_songs_'
+    - builder_table_update_markohrivnak_songs__6.php
+1.0.13:
+    - 'Updated table markohrivnak_songs_'
+    - builder_table_update_markohrivnak_songs__7.php

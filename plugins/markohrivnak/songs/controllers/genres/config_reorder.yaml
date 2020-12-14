@@ -1,0 +1,4 @@
+title: Genres
+modelClass: MarkoHrivnak\Songs\Models\Genre
+toolbar:
+    buttons: reorder_toolbar

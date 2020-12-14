@@ -1,0 +1,43 @@
+fields:
+    song_name:
+        label: Song
+        span: auto
+        type: text
+    song_artist:
+        label: Artist
+        span: auto
+        type: text
+    description:
+        label: Description
+        span: full
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: song_name
+            type: slug
+        type: text
+    genres:
+        label: Genres
+        nameFrom: genre_title
+        descriptionFrom: description
+        span: auto
+        type: relation
+    lyrics:
+        label: Lyrics
+        span: auto
+        size: huge
+        mode: tab
+        type: markdown
+    image:
+        label: Image
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '75'
+        imageHeight: '75'
+        type: fileupload

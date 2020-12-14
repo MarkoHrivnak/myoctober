@@ -1,0 +1,4 @@
+title: Songs
+modelClass: MarkoHrivnak\Songs\Models\Songs
+toolbar:
+    buttons: reorder_toolbar

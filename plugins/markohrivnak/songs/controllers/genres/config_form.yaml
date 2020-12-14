@@ -1,0 +1,10 @@
+name: Genres
+form: $/markohrivnak/songs/models/genre/fields.yaml
+modelClass: MarkoHrivnak\Songs\Models\Genre
+defaultRedirect: markohrivnak/songs/genres
+create:
+    redirect: 'markohrivnak/songs/genres/update/:id'
+    redirectClose: markohrivnak/songs/genres
+update:
+    redirect: markohrivnak/songs/genres
+    redirectClose: markohrivnak/songs/genres

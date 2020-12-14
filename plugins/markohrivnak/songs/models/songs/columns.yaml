@@ -1,0 +1,14 @@
+columns:
+    song_name:
+        label: 'Song '
+        type: text
+        searchable: true
+        sortable: true
+    song_artist:
+        label: Artist
+        type: text
+        searchable: true
+        sortable: true
+    description:
+        label: Description
+        type: text

@@ -1,0 +1,16 @@
+plugin:
+    name: 'markohrivnak.songs::lang.plugin.name'
+    description: 'markohrivnak.songs::lang.plugin.description'
+    author: 'Marko Hrivnak'
+    icon: oc-icon-spotify
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Songs
+        url: markohrivnak/songs/songs
+        icon: icon-spotify
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: markohrivnak/songs/genres
+                icon: icon-step-forward

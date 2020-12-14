@@ -1,0 +1,51 @@
+title = "Song-selection"
+url = "/song/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "MarkoHrivnak\Songs\Models\Songs"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "song_name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+<div class="container" style="max-width: 100%;text-align: center;font-family: 'Philosopher', sans-serif;background-color: #33334d;min-height: 1000px;color: #aaabb8;">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+            <div class="info-div" style="background-color: #25274D; padding: 25px;margin-top: 25px;border-radius: 5px;">
+                <h1 style="margin-top: 25px;color: #88bdbc;">{{ record.song_name }}</h1>
+                <p style="font-size: 25px;">{{ record.song_artist }}</p>
+                <p>{{ record.description }}</p>
+
+                <h1 style="color:#88bdbc">Text pesničky</h1>
+                    {{ record.lyrics|raw }}
+                <h1 style="margin-top: 25px;color: #88bdbc; ">Žánre</h1>
+
+            {% for genres in record.genres %}
+                {{genres.genre_title}} <br> 
+            {% endfor %}
+
+            {% else %}
+                {{ notFoundMessage }}
+            {% endif %}
+
+                <img style="margin-top: 25px;max-width: 150px;" src=" {{record.image.path}}">
+            </div>
+        </div>
+        <div class="col-md-3">
+            
+        </div>
+    </div>
+</div>
+    
+    
+

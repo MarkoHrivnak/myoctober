@@ -1,0 +1,10 @@
+name: Songs
+form: $/markohrivnak/songs/models/songs/fields.yaml
+modelClass: MarkoHrivnak\Songs\Models\Songs
+defaultRedirect: markohrivnak/songs/songs
+create:
+    redirect: 'markohrivnak/songs/songs/update/:id'
+    redirectClose: markohrivnak/songs/songs
+update:
+    redirect: markohrivnak/songs/songs
+    redirectClose: markohrivnak/songs/songs
